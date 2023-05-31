@@ -1,0 +1,477 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #141414;
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.container header {
+  position: relative;
+  height: 200px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .leftImg {
+  height: 100%;
+  border-radius: 80px;
+  margin-left: 45px;
+}
+
+header .centerImg {
+  height: 80%;
+}
+
+header .rightImg {
+  height: 100%;
+  border-radius: 80px;
+  margin-right: 45px;
+}
+
+header .menuTablet,
+header .menuMobile {
+  position: fixed;
+  right: 0;
+  z-index: 2;
+  border: 2px solid #000;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  background: #d1cbb6;
+  display: none;
+}
+
+.container nav {
+  height: 65px;
+  padding: 0 5px 0 5px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .buttons {
+  width: 19.5%;
+  height: 50px;
+  border: 1px solid #000;
+  border-radius: 50px;
+  box-shadow: 1px 1px 3px #000;
+  color: #000;
+  background: #d1cbb6;
+  text-decoration: none;
+  letter-spacing: 3px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center center;
+}
+
+nav .buttons:hover {
+  background: #fff;
+}
+
+.buttons img {
+  height: 50px;
+  border-radius: 50px;
+}
+
+.buttons span {
+  justify-self: start;
+  font-family: "Philosopher", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+nav .active {
+  border: 1px solid #d1cbb6;
+  color: #d1cbb6;
+  background: #000;
+  cursor: default;
+}
+
+nav .active:hover {
+  background: #000;
+}
+
+.container .navMobile {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: inset 1px 1px 0 2px #d1cbb6, inset -1px -1px 0 2px #d1cbb6,
+    inset 3px 3px 0 2px #000, inset -3px -3px 0 2px #000;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.navMobile .buttons {
+  width: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0;
+  margin-right: 80px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  grid-template-columns: 1fr 7fr;
+  place-items: center center;
+}
+
+.navMobile .buttons:first-child {
+  margin-top: 30px;
+}
+
+.navMobile .buttons img {
+  display: block;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.navMobile .buttons span {
+  justify-self: start;
+  font-size: 32px;
+}
+
+.container article {
+  min-height: 1000px;
+  display: flex;
+}
+
+article section {
+  width: 70%;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  margin-right: 20px;
+  background: #fff;
+}
+
+section .home,
+section .books,
+section .games,
+section .series,
+section .music {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+section .home {
+  display: flex;
+}
+
+section h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #000;
+  font-family: "Philosopher", sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 1px #d1cbb6, 1px 1px 3px #d1cbb6, 2px 2px 4px #000;
+}
+
+section img {
+  width: 100%;
+  border-top: 5px double #350202;
+  border-bottom: 5px double #350202;
+  margin-bottom: 60px;
+  box-shadow: 0 0 5px 3px #000;
+}
+
+section .sectionImgsMobile {
+  display: none;
+}
+
+section h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+section p,
+section ul {
+  padding: 0 100px 30px 100px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: justify;
+  line-height: 30px;
+}
+
+section p:last-child {
+  margin-bottom: 40px;
+}
+
+section ul {
+  align-self: flex-start;
+  font-size: 19px;
+  list-style-type: disc;
+}
+
+section ul li {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+section a {
+  text-decoration: none;
+}
+
+section a br {
+  display: none;
+}
+
+section a:link {
+  color: #94784c;
+}
+
+section a:visited {
+  color: #757272;
+}
+
+section a:hover {
+  color: #b10811;
+}
+
+section .books img {
+  width: 90%;
+  border: none;
+  box-shadow: none;
+}
+
+section .games img {
+  border-top: 5px double #000;
+  border-bottom: 5px double #000;
+}
+
+section .games p {
+  padding: 0 100px 30px 60px;
+}
+
+section .games p img {
+  float: left;
+  width: 230px;
+  border: 2px double #d1cbb6;
+  border-radius: 20px;
+  margin-right: 60px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px #000;
+}
+
+section .games p img:hover {
+  border-right: 2px double #b10811;
+  border-bottom: 2px double #b10811;
+}
+
+section .games p .cdProjectRedImg {
+  width: 120px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+section .series img {
+  border-top: 5px double #294250;
+  border-bottom: 5px double #294250;
+}
+
+section .series iframe {
+  width: 80%;
+  height: 450px;
+  border: 2px double #d1cbb6;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 5px 2px #000, 3px 0 5px 0 #000, 0 3px 5px 0 #000;
+}
+
+section .series p img {
+  float: left;
+  width: 200px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px 2px #000, 3px 0 5px 0 #000, 0 3px 5px 0 #000;
+}
+
+section .music .audioFiles {
+  width: 90%;
+  border: 1px solid #60606066;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  box-shadow: 1px 1px 5px 0 #60606066, -1px -1px 5px 0 #60606066;
+  background: linear-gradient(90deg, #60606066, #d0d0d066);
+}
+
+.audioFiles details {
+  margin: 10px;
+  text-align: center;
+}
+
+.audioFiles details:first-child summary {
+  border: 1px solid #d1cbb6;
+  color: #d1cbb6;
+  background: #000;
+  text-shadow: none;
+}
+
+.audioFiles details summary {
+  padding: 15px;
+  padding-left: 45px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 1px #000;
+  background: #d1cbb6;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 1px #d1cbb6, 1px 1px 3px #d1cbb6, 2px 2px 4px #000;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.audioFiles details iframe {
+  width: 97%;
+  height: 360px;
+  border: 1px solid #60606066;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 3px 1px #000;
+}
+
+article aside {
+  width: 30%;
+  padding-bottom: 80px;
+  border-radius: 20px;
+  background: #fff;
+  font-family: "Cormorant Infant", serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+aside h1 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #000;
+  font-family: "Philosopher", sans-serif;
+  font-size: 42px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 1px #d1cbb6, 1px 1px 3px #d1cbb6, 2px 2px 4px #000;
+}
+
+aside .bestiaryСharacters {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside .bestiaryСharacters:nth-child(2),
+aside .bestiaryСharacters:nth-child(3),
+aside .bestiaryСharacters:nth-child(4),
+aside .bestiaryСharacters:nth-child(5) {
+  display: flex;
+}
+
+.bestiaryСharacters h2 {
+  font-size: 32px;
+}
+
+.bestiaryСharacters .gifBox {
+  border: 1px solid #d1cbb6;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-shadow: 0 0 5px 3px #000;
+  background: #d1cbb6;
+  display: flex;
+}
+
+.gifBox .gifs {
+  width: 49%;
+  border: 1px solid #d1cbb6;
+  box-shadow: 0 0 5px 3px #000;
+  pointer-events: none;
+}
+
+.gifBox p {
+  align-self: center;
+  width: 40%;
+  padding-left: 25px;
+  margin: 0;
+  font-size: 17.8px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.container footer {
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  margin: 15px 0 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+footer p:last-child {
+  margin: 0 0 15px 0;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 7px;
+  box-shadow: inset 0 0 6px #00000080;
+  background: #323232;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #d1cbb6;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid #323232;
+  border-radius: 7px;
+  box-shadow: inset 0 0 6px #00000080;
+  background: #d1cbb6;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #323232;
+}
