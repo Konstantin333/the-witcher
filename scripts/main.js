@@ -128,12 +128,23 @@ function hideDetails() {
   });
 }
 
+function stopCopy() {
+  document.ondragstart = noselect;
+  document.onselectstart = noselect;
+  document.oncontextmenu = noselect;
+
+  function noselect() {
+    return false;
+  }
+}
+
 function init() {
   changeSection(nav);
   changeSection(navMobile);
   showNavigation(menuTablet);
   showNavigation(menuMobile);
   hideDetails();
+  stopCopy();
 }
 
 init();
